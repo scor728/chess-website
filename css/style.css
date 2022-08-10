@@ -1,0 +1,111 @@
+/* Grid Layout Setup, .page covers the entire page */
+.page {
+    background-color: #ffffff; /* White */
+    display: grid;
+    grid-template-columns: 4fr 8fr 6fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "logo banner banner"
+        "sidebar left-column right-column"
+        "sidebar subtext subtext";
+}
+
+/* Coding for All Boxes within the grid-layout */ 
+.box {
+    padding: 0px;
+    font-family: 'Montserrat', 'sans-serif';
+    
+}
+
+/* Logo Box Styling, Located in the Top Left of the Screen */
+.logo {
+    background-color: #000000; /* Black */
+    grid-area: logo;
+}
+/* Logo Image Styling */
+.logo img {
+    width: 75%;
+    height: auto;
+    display: block;
+    /*     Top|Rgt|Btm|Lft */
+    margin: 5% 12% 0% 9%;
+}
+
+/* Sidebar Box Styling, Located onthe Left of the Screen */
+/* Has the Same Colour Scheme as Logo Box */
+.sidebar {
+    background-color: #000000; /* Black */
+    color: #ffffff; /* White */
+    font-weight: bolder;
+    grid-area: sidebar;
+}
+
+/* Sidebar List Styling (Navigation and Contact) */
+.sidebar ul {
+    list-style-type: none;
+    display: block;
+    margin: 0px;
+}
+
+/* Styling for the Navigation List in the Sidebar */
+.navigation ul {
+    /*     Top|Rgt|Btm|Lft*/
+    padding: 0% 0% 0% 10%;
+    font-size: 35px
+}
+
+/* Styling for the contact detail list in the Sidebar */
+.contact ul {
+    padding: 5%;
+    margin-top: 200px;
+}
+
+/* Navigation Link Styling*/
+li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Styling For Navigation Links on Sidebar, Causes colour change when cursor hovers*/
+a:hover {
+    color: lightgrey;
+}
+
+.banner {
+    grid-area: banner;
+}
+
+/* Styling for the Banner Image */
+.banner img {
+    width: 100%;
+    height: auto;
+}
+
+/* Styling for the left column text */
+.left-column {
+    grid-area: left-column;
+    padding: 7%;
+}
+
+/* Styling for the main heading in the left column*/
+.left-column h1 {
+    font-size: 45px;
+}
+
+.right-column {
+    grid-area: right-column;
+
+}
+
+/* Styling for the Image in the right column */
+.right-column img {
+    width: 100%;
+    height: auto;  
+    padding-top: 10px;
+}
+
+/* Styling for the subtext */
+.subtext {
+    grid-area: subtext;
+    padding: 5%;
+}
